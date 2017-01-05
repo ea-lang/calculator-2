@@ -1,14 +1,21 @@
-"""
-calculator.py
+# """
+# calculator.py
 
-Using our arithmetic.py file from Exercise02, create the
-calculator program yourself in this file.
-"""
+# Using our arithmetic.py file from Exercise02, create the
+# calculator program yourself in this file.
+# """
 
 from arithmetic import *
 
 
-# Your code goes here
+# # Your code goes here
+
+def my_reduce(function,calc_list):
+    for i in range(len(calc_list)):
+        if i == (len(calc_list))-1:
+            return calc_list
+        else:
+            calc_list[i:i+2] = function(calc_list[i], calc_list[i+1]) 
 
  
 while True:
